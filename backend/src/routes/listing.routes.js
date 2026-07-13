@@ -1,0 +1,14 @@
+import { Router } from "express";
+import { getAllListings, getListingById, createListing, updateListing, deleteListing, addListingImages, deleteListingImage, getHostListings } from "../controllers/listing.controller.js";
+import { protect, restrictTo } from "../middlewares/auth.middleware.js";
+import { handleUploadMultiple } from "../middlewares/upload.middleware.js";
+const router = Router();
+router.get("/",                        getAllListings);
+router.get("/host/my-listings",        protect, getHostListings);
+router.get("/:id",                     getListingById);
+router.post("/",                       protect, handleUploadMultiple, createListing);
+router.put("/:id",                     protect, updateListing);
+router.delete("/:id",                  protect, deleteListing);
+router.post("/:id/images",             protect, handleUploadMultiple, addListingImages);
+router.delete("/:id/images/:imageId",  protect, deleteListingImage);
+export default router;

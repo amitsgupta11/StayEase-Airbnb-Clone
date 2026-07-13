@@ -1,0 +1,11 @@
+import { Router } from "express";
+import { createBooking, getBookingById, cancelBooking, getHostBookings, updateBookingStatus } from "../controllers/booking.controller.js";
+import { protect } from "../middlewares/auth.middleware.js";
+const router = Router();
+router.use(protect);
+router.post("/",                  createBooking);
+router.get("/host/incoming",      getHostBookings);
+router.get("/:id",                getBookingById);
+router.put("/:id/cancel",         cancelBooking);
+router.put("/:id/status",         updateBookingStatus);
+export default router;

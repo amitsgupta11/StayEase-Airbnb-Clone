@@ -1,0 +1,12 @@
+import { Router } from "express";
+import { getDashboard, getAllUsers, deleteUser, updateUserRole, getAllListingsAdmin, getAllBookingsAdmin } from "../controllers/admin.controller.js";
+import { protect, restrictTo } from "../middlewares/auth.middleware.js";
+const router = Router();
+router.use(protect, restrictTo("admin"));
+router.get("/dashboard",        getDashboard);
+router.get("/users",            getAllUsers);
+router.delete("/users/:id",     deleteUser);
+router.put("/users/:id/role",   updateUserRole);
+router.get("/listings",         getAllListingsAdmin);
+router.get("/bookings",         getAllBookingsAdmin);
+export default router;
