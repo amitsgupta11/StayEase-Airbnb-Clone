@@ -306,8 +306,8 @@ MongoDB Atlas → airbnb-clone → users → Edit your user → role: "admin"
 
 **Amit Gupta**
 - 🎓 Final Year B.Tech CSE
-- 🌐 Portfolio: [stay-ease-airbnb-clone.vercel.app](https://stay-ease-airbnb-clone.vercel.app)
-- 📧 Email: amit5080gupta@gmail.com
+- 🌐 Portfolio-project: [stay-ease-airbnb-clone.vercel.app](https://stay-ease-airbnb-clone.vercel.app)
+- 📧 Email: amitsgupta18@gmail.com
 - 💼 GitHub: [@amitsgupta11](https://github.com/amitsgupta11)
 
 ---
